@@ -1,13 +1,7 @@
 import React from "react";
-import PhotoCard from "./PhotoCard";
-import Search from "./Search";
 
-function Home({ photos, changeSearchStringInState }) {
-
+function Search({ changeSearchStringInState }) {
   return (
-
-    <ul className="cards">
-      
     <div className="searchbar">
       <label htmlFor="search">Search Photos:</label>
       <input
@@ -17,21 +11,7 @@ function Home({ photos, changeSearchStringInState }) {
         onChange={(e) => changeSearchStringInState( e.target.value)}
       />
     </div>
-
-
-
-      <div>
-      {photos.map(photo => 
-      <PhotoCard key={photo.id} photo={photo} />)}
-      </div>
-      
-      </ul>
   );
-
-
-
 }
- 
 
-
-export default Home;
+export default Search;
