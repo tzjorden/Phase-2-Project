@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import PhotoCard from "./PhotoCard";
 import Search from "./Search";
+import NewHouseForm from "./NewHouseForm";
 
 
 // changeSearchStringInState
@@ -15,6 +16,10 @@ function Home ({ Houses, changeSearchStringInState }) {
   return (
 
     <div class="Home">
+
+      <div class="newForm">
+        <NewHouseForm />
+      </div>
   <div class="Searchbar">
     
       <Search changeSearchStringInState={changeSearchStringInState} />

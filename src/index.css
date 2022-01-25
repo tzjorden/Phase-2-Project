@@ -51,12 +51,16 @@ code {
   margin-top: 0.5rem;
 }
 .searchbar {
-  padding: 1rem;
+  /* padding: 1rem;
   flex-direction: column;
   width: 70%;
   margin: 0 auto;
-  
-  
+   */
+   position:absolute;
+   height:100px;
+   width:400px; 
+   top:50px;
+   left:120px;
   
   
 }
@@ -66,12 +70,12 @@ button.primary {
 }
 .Home {  display: grid;
   grid-template-columns: 0.6fr 1.8fr 0.6fr;
-  grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr [re] 1.5fr 1.5fr 0.9fr 0.6fr;
+  grid-template-rows: 0.5fr 0.5fr 2fr 2fr [re] 2fr 2.2fr 2.1fr 0.6fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
+    ". newForm ."
     ". Searchbar ."
-    ". results ."
     ". results ."
     ". results ."
     ". results ."
@@ -80,24 +84,43 @@ button.primary {
     ". . .";
 }
 
-.Searchbar { 
-  grid-area: Searchbar;
-  text-align:center;
-  margin: 50px;
-  height: 50%;
+.newForm { grid-area: newForm; }
+
+.Searchbar { grid-area: Searchbar;
+  position:relative;
+  width:640px;
   
-  
- }
- #search {
-   width: 100%;
-   height: 100%
+  margin: 0 auto;
  }
 
 .results { grid-area: results; }
 
+
+
+ 
+ #search {
+   width: 100%;
+   height: 40%
+ }
+
 .nav { 
   text-align:center;
 }
+.newForm {
+  position:relative;
+  
+  width:640px;
+  top:50px;
+  text-align:center;
+  margin: auto;
+}
+/* .form { 
+  position:absolute;
+  height:100px;
+  width:400px; 
+  top:50px;
+  left:120px;
+} */
 
 
 
