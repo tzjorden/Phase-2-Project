@@ -1,36 +1,36 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import PhotoCard from "./PhotoCard";
 import Search from "./Search";
 
-function Home({ photos, changeSearchStringInState }) {
+
+// changeSearchStringInState
+
+function Home ({ plants, changeSearchStringInState }) {
+  
+
+  
+  
+  
 
   return (
 
     <ul className="cards">
+      <div> 
+        <Search changeSearchStringInState={changeSearchStringInState} />
+      </div>
       
-    <div className="searchbar">
-      <label htmlFor="search">Search Photos:</label>
-      <input
-        type="text"
-        id="search"
-        placeholder="Type a name to search..."
-        onChange={(e) => changeSearchStringInState( e.target.value)}
-      />
+    <div className="searchbar"><ul className="cards">
+      {plants.map(plant => 
+      <PhotoCard key={plant.id} plant={plant} />)}</ul>
     </div>
 
-
-
-      <div>
-      {photos.map(photo => 
-      <PhotoCard key={photo.id} photo={photo} />)}
-      </div>
       
       </ul>
   );
 
+      }
 
-
-}
+// }
  
 
 

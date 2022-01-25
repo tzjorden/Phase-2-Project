@@ -1,10 +1,11 @@
 import React from 'react';
 
-function PhotoCard({ photo }) {
+function PhotoCard({ plant }) {
   return ( <div>
      <li className="card">
-      <img src={photo.photo} alt={"picture name"} />
-      <h4>{photo.photographer}</h4>
+      <img src={plant.image} alt={"plant name"} />
+      <h4>{plant.name}</h4>
+      <p>Price: {plant.price}</p>
       {true ? (
         <button className="primary">In Stock</button>
       ) : (

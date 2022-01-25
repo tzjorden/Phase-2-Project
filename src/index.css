@@ -29,4 +29,17 @@ code {
 }
 
 
-
+.card {
+  margin: 1rem;
+}
+.card img {
+  width: 25%;
+}
+.card button {
+  margin-top: 0.5rem;
+}
+.searchbar {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
