@@ -5,7 +5,7 @@ import Search from "./Search";
 
 // changeSearchStringInState
 
-function Home ({ plants, changeSearchStringInState }) {
+function Home ({ Houses, changeSearchStringInState }) {
   
 
   
@@ -22,8 +22,8 @@ function Home ({ plants, changeSearchStringInState }) {
   </div>
   <div class="results">
  <div><ul className="cards">
-      {plants.map(plant => 
-      <PhotoCard key={plant.id} plant={plant} />)}</ul>
+      {Houses.map(Houses => 
+      <PhotoCard key={Houses.id} Houses={Houses} />)}</ul>
     </div>
   </div>
 </div>

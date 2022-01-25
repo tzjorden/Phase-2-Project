@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function PhotoCard({ plant }) {
+function PhotoCard({ Houses }) {
 
   const [isSaved, setIsSaved] = useState(true)
   const toggleOut = () => {
@@ -9,9 +9,9 @@ function PhotoCard({ plant }) {
   }
   return ( <div>
      <li className="card">
-      <img src={plant.image} alt={"plant name"} />
-      <h4>{plant.name}</h4>
-      <p>Price: {plant.price}</p>
+      <img src={Houses.image} alt={"plant name"} />
+      <h4>{Houses.name}</h4>
+      <p>Price: {Houses.price}</p>
       {isSaved ? (
         <button onClick= {toggleOut} className="primary">Save</button>
       ) : (

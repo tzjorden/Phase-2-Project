@@ -57,6 +57,8 @@ code {
   margin: 0 auto;
   
   
+  
+  
 }
 button.primary {
   background-color:white;
@@ -81,9 +83,21 @@ button.primary {
 .Searchbar { 
   grid-area: Searchbar;
   text-align:center;
+  margin: 50px;
+  height: 50%;
+  
+  
+ }
+ #search {
+   width: 100%;
+   height: 100%
  }
 
 .results { grid-area: results; }
+
+.nav { 
+  text-align:center;
+}
 
 
 

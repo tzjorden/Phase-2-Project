@@ -9,12 +9,12 @@ import PhotoCard from "./PhotoCard";
 
 function App() {
 
-  const [plants, setPlants] = useState([])
+  const [Houses, setHouses] = useState([])
   const [search, setSearch] = useState('')
 
   useEffect(() => {
     fetch('http://localhost:3000/plants').then(r => r.json())
-    .then( setPlants  )
+    .then( setHouses )
   }, [])
 
   
@@ -27,9 +27,9 @@ function App() {
   
   const filteredPlants = () => {
     if (search.length > 0) {
-      return plants.filter(plant => plant.name.toLowerCase().includes(search.toLowerCase()))
+      return Houses.filter(house => house.name.toLowerCase().includes(search.toLowerCase()))
     } else {
-       return plants
+       return Houses
     }
   }
 
@@ -49,7 +49,7 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/">
-          <Home  plants={ filteredPlants() } changeSearchStringInState={changeSearchStringInState} />
+          <Home  Houses={ filteredPlants() } changeSearchStringInState={changeSearchStringInState} />
         </Route>
       </Switch>
     </div>
