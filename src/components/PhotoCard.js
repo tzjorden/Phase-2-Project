@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function PhotoCard({ photo }) {
+function PhotoCard({ Houses }) {
+
+  const [isSaved, setIsSaved] = useState(true)
+  const toggleOut = () => {
+    setIsSaved(!isSaved)
+
+  }
   return ( <div>
      <li className="card">
-      <img src={photo.photo} alt={"picture name"} />
-      <h4>{photo.photographer}</h4>
-      {true ? (
-        <button className="primary">In Stock</button>
+      <img src={Houses.image} alt={"plant name"} />
+      <h4>{Houses.name}</h4>
+      <p>Price: {Houses.price}</p>
+      {isSaved ? (
+        <button onClick= {toggleOut} className="primary">Save</button>
       ) : (
-        <button>Out of Stock</button>
+        <button onClick= {toggleOut} className="primary" >Saved</button>
       )}
     </li>
   </div>

@@ -5,35 +5,39 @@ import Home from "./Home";
 import About from "./About";
 import Login from "./Login";
 import NavBar from "./NavBar";
+import PhotoCard from "./PhotoCard";
 
 function App() {
 
-  const [photos, setPhotos] = useState([])
+  const [Houses, setHouses] = useState([])
   const [search, setSearch] = useState('')
-  
 
-
-                                    //  search?query=${search}
   useEffect(() => {
-    fetch(`https://api.pexels.com/v1/curated?per_page=1`, {
-      headers: {
-        Authorization: "563492ad6f91700001000001e63cf076d54e4c31b63b3c036b3f3cf5"
-    } }).then(r => r.json()).then ( setPhotos )
+    fetch('http://localhost:3000/plants').then(r => r.json())
+    .then( setHouses )
   }, [])
+
   
-  console.log(photos.photographer)
+  
+
   const changeSearchStringInState = searchString => {
     setSearch(searchString)
   }
-
-  const filteredPhotos = () => {
+  
+  
+  const filteredPlants = () => {
     if (search.length > 0) {
-      return photos.filter(photo => photo.photographer.includes(search))
+      return Houses.filter(house => house.name.toLowerCase().includes(search.toLowerCase()))
     } else {
-       return photos
+       return Houses
     }
-
   }
+
+   
+
+
+
+
   return (
     <div>
       <NavBar />
@@ -45,7 +49,7 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/">
-          <Home photos={ filteredPhotos() } changeSearchStringInState={changeSearchStringInState}/>
+          <Home  Houses={ filteredPlants() } changeSearchStringInState={changeSearchStringInState} />
         </Route>
       </Switch>
     </div>
