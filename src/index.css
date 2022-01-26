@@ -35,6 +35,7 @@ code {
   margin: 1rem;
   text-align: center;
   border: 1px solid rgb(0, 0, 0);
+
   
 }
 .cards { 
@@ -70,7 +71,7 @@ button.primary {
 }
 .Home {  display: grid;
   grid-template-columns: 0.6fr 1.8fr 0.6fr;
-  grid-template-rows: 0.5fr 0.5fr 2fr 2fr [re] 2fr 2.2fr 2.1fr 0.6fr;
+  grid-template-rows: 1.2fr 0.7fr 2fr 2fr [re] 2fr 2.2fr 2.1fr 0.6fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -121,7 +122,6 @@ button.primary {
   top:50px;
   left:120px;
 } */
-
 
 
 

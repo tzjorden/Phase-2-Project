@@ -13,7 +13,7 @@ function App() {
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:3000/plants').then(r => r.json())
+    fetch('http://localhost:3000/homes').then(r => r.json())
     .then( setHouses )
   }, [])
 
@@ -27,7 +27,7 @@ function App() {
   
   const filteredPlants = () => {
     if (search.length > 0) {
-      return Houses.filter(house => house.name.toLowerCase().includes(search.toLowerCase()))
+      return Houses.filter(house => house.street.toLowerCase().includes(search.toLowerCase()))
     } else {
        return Houses
     }
