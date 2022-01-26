@@ -33,10 +33,8 @@ function NewHouseForm() {
           <form onSubmit={handleSubmit}>
             <input onChange={e => setStreet(e.target.value)} type="text" name="Street" placeholder="Street" />
             <input onChange={e => setImage(e.target.value)} type="text" name="Image" placeholder="Image URL" />
-            <input onChange={e => setStatus(e.target.value)} type="text" name="Status" placeholder="Status" />
             <input onChange={e => setPrice(e.target.value)} type="number" name="Price" step="0.01" placeholder="Price" />
             <input onChange={e => setBedRooms(e.target.value)} type="text" name="Bedrooms" step="0.01" placeholder="Number of Rooms" />
-            <input onChange={e => setbathroom(e.target.value)} type="text" name="Bathroom" step="0.01" placeholder="Number of Bathrooms" />
             <input onChange={e => setsquareFeet(e.target.value)} type="text" name="Squarefeet" step="0.01" placeholder="Squarefeet" />
             <button type="submit">Add House</button>
     
