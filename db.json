@@ -1,52 +1,54 @@
 {
-  "plants": [
+  "homes": [
     {
       "id": 1,
-      "name": "Aloe",
-      "image": "https://www.almanac.com/sites/default/files/styles/large/public/image_nodes/aloe-vera-white-pot_sunwand24-ss_edit.jpg?itok=6dE5RWDP",
-      "price": 15.99
+      "street": "southgate",
+      "image": "https://ap.rdcpix.com/f2ffcf5b959ed39ac07c360df6690208l-m3885332898od-w480_h360_x2.webp",
+      "status": "active",
+      "price": 475000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareFeet": 1654
     },
     {
       "id": 2,
-      "name": "ZZ Plant",
-      "image": "https://www.beesonsnursery.com/uploads/1/3/2/7/132737689/s325910609984617733_p932_i1_w378.jpeg",
-      "price": 25.98
+      "street": "carriage",
+      "image": "https://ap.rdcpix.com/1377f2c2c228d73f5487e9697263ea06l-m2390503432od-w480_h360_x2.webp",
+      "status": "pending",
+      "price": 450000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareFeet": 2372
     },
     {
       "id": 3,
-      "name": "Pilea peperomioides",
-      "image": "https://cdn.webshopapp.com/shops/30495/files/372685119/pilea-peperomioides-chinese-money-plant-xl.jpg",
-      "price": 5.99
+      "street": "kiowa",
+      "image": "https://ap.rdcpix.com/eee241fcb8e7dcf08bb252ab78fe317al-m2402545052od-w480_h360_x2.webp",
+      "status": "pending",
+      "price": 579000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareFeet": 2113
     },
     {
       "id": 4,
-      "name": "Pothos",
-      "image": "https://images.squarespace-cdn.com/content/v1/54fbb611e4b0d7c1e151d22a/1610489398028-Q5JAILEOCGTE26U0MV36/golden-pothos-plant.jpg",
-      "price": 12.11
+      "street": "lovell",
+      "image": "https://ap.rdcpix.com/22f0b0d2c2160b052680a42125672540l-m633656631od-w480_h360_x2.webp",
+      "status": "active",
+      "price": 615000,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "squareFeet": 2612
     },
     {
-      "id": 5,
-      "name": "Jade",
-      "image": "https://m.media-amazon.com/images/I/61GzpzR5hBL._AC_SL1000_.jpg",
-      "price": 10.37
-    },
-    {
-      "id": 6,
-      "name": "Monstera Deliciosa",
-      "image": "https://m.media-amazon.com/images/I/5111WlxKCrL._AC_SL1000_.jpg",
-      "price": 25.99
-    },
-    {
-      "id": 7,
-      "name": "Fiddle Leaf Fig",
-      "image": "https://cb2.scene7.com/is/image/CB2/PottedFiddleLfFig7ftBlkPotSHS19/$web_pdp_main_carousel_xs$/190410160828/faux-potted-fiddle-leaf-fig-7.jpg",
-      "price": 55
-    },
-    {
-      "name": "Sunflower",
-      "image": "https://m.media-amazon.com/images/I/91gl91S-94L._AC_SX425_.jpg",
-      "price": "0.04",
-      "id": 8
+      "street": "25714 SE 164TH ST",
+      "image": "https://images.unsplash.com/photo-1549517045-bc93de075e53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80",
+      "status": "active",
+      "price": "44444",
+      "bedRooms": "3",
+      "bathRoom": "4",
+      "squareFeet": "700",
+      "id": 5
     }
   ]
 }
