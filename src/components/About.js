@@ -1,7 +1,7 @@
 import React from "react";
 
 function About() {
-  return <div class="Saved">Saved</div>;
+  return <div className="Saved">Saved</div>;
 }
 
 export default About;

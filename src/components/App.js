@@ -5,7 +5,6 @@ import Home from "./Home";
 import About from "./About";
 import Login from "./Login";
 import NavBar from "./NavBar";
-import PhotoCard from "./PhotoCard";
 
 function App() {
 
@@ -13,12 +12,11 @@ function App() {
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:3000/homes').then(r => r.json())
-    .then( setHouses )
-  }, [])
-
-  
-  
+    fetch('http://localhost:3000/homes')
+    .then(r => r.json())
+    .then(setHouses)
+  }, []
+  )
 
   const changeSearchStringInState = searchString => {
     setSearch(searchString)
@@ -34,10 +32,10 @@ function App() {
   }
 
   // const filteredPrice = (search) => {    
-  //   if(housePrice > 500000) {
+  //   if(search >= 500000) {
   //     return houses.filter(house => house.price.includes(housePrice));
   //   } else {
-  //     return homes;
+  //     return houses;
   //   }
   // }
 
@@ -45,8 +43,7 @@ function App() {
 
   return (
     <div>
-      {/* navbar \? */}
-      <NavBar />  
+\      <NavBar />  
       <Switch>
         <Route exact path="/about">
           <About />
@@ -55,7 +52,7 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/">
-          <Home  houses={ filteredHouse() } changeSearchStringInState={changeSearchStringInState} />
+          <Home  houses={ filteredHouse() } changeSearchStringInState={changeSearchStringInState}  />
         </Route>
       </Switch>
     </div>
