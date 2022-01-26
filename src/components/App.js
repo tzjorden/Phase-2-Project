@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div>
-\      <NavBar />  
+     <NavBar />  
       <Switch>
         <Route exact path="/about">
           <About />

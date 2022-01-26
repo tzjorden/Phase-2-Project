@@ -97,6 +97,11 @@ button.primary {
 .results { grid-area: results; }
 
 
+.articles{
+  text-align: center;
+}
+
+
 
  
  #search {
