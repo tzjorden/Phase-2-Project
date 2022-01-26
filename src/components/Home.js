@@ -11,17 +11,17 @@ function Home ({ houses, changeSearchStringInState }) {
   
   return (
 
-    <div class="Home">
+    <div className="Home">
 
-      <div class="newForm">
+      <div className="newForm">
         <NewHouseForm />
       </div>
-  <div class="Searchbar">
+  <div className="Searchbar">
     
-      <Search changeSearchStringInState={changeSearchStringInState} />
+      <Search changeSearchStringInState = {changeSearchStringInState} />
     
   </div>
-  <div class="results">
+  <div className="results">
   <div>
     <ul className="cards">
       {houses.map(house => 
