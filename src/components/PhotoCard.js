@@ -16,7 +16,7 @@ function PhotoCard({ house }) {
       <h4>Price: {house.price}</h4>
       <p>{house.squareFeet} sqft</p>
       <p style={{textTransform: 'capitalize'}}>Area: {house.street}</p>
-      <p >Bedrooms: {house.bedrooms}, Bathrooms: {house.bedrooms}.</p>
+      <p >Bedrooms: {house.bedRooms}.</p>
       {isSaved ? (
         <button onClick= {toggleOut} className="primary">Save</button>
       ) : (

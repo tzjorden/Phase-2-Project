@@ -31,18 +31,7 @@ function Home ({ houses, changeSearchStringInState }) {
   </div>
 </div>
 
-    /* // <ul className="cards">
-    //   <div> 
-    //     <Search changeSearchStringInState={changeSearchStringInState} />
-    //   </div>
-      
-    // <div id="searchbar"><ul className="cards">
-    //   {plants.map(plant =>  */
-    //   <PhotoCard key={plant.id} plant={plant} />)}</ul>
-    // </div>
-
-      
-    //   </ul>
+  
   );
 
       }
