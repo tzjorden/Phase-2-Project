@@ -9,7 +9,7 @@ import PhotoCard from "./PhotoCard";
 
 function App() {
 
-  const [Houses, setHouses] = useState([])
+  const [houses, setHouses] = useState([])
   const [search, setSearch] = useState('')
 
   useEffect(() => {
@@ -25,22 +25,28 @@ function App() {
   }
   
   
-  const filteredPlants = () => {
+  const filteredHouse = () => {
     if (search.length > 0) {
-      return Houses.filter(house => house.street.toLowerCase().includes(search.toLowerCase()))
+      return houses.filter(house => house.street.toLowerCase().includes(search.toLowerCase()))
     } else {
-       return Houses
+       return houses
     }
   }
 
-   
+  // const filteredPrice = (search) => {    
+  //   if(housePrice > 500000) {
+  //     return houses.filter(house => house.price.includes(housePrice));
+  //   } else {
+  //     return homes;
+  //   }
+  // }
 
-
-
+  // homes.filter(function(filteredHome){ return filteredHome.Price > 2500000 && x.Price < 800000});
 
   return (
     <div>
-      <NavBar />
+      {/* navbar \? */}
+      <NavBar />  
       <Switch>
         <Route exact path="/about">
           <About />
@@ -49,7 +55,7 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/">
-          <Home  Houses={ filteredPlants() } changeSearchStringInState={changeSearchStringInState} />
+          <Home  houses={ filteredHouse() } changeSearchStringInState={changeSearchStringInState} />
         </Route>
       </Switch>
     </div>

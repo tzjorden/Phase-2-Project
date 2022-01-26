@@ -6,13 +6,9 @@ import NewHouseForm from "./NewHouseForm";
 
 // changeSearchStringInState
 
-function Home ({ Houses, changeSearchStringInState }) {
-  
-
+function Home ({ houses, changeSearchStringInState }) {
   
   
-  
-
   return (
 
     <div class="Home">
@@ -26,9 +22,11 @@ function Home ({ Houses, changeSearchStringInState }) {
     
   </div>
   <div class="results">
- <div><ul className="cards">
-      {Houses.map(Houses => 
-      <PhotoCard key={Houses.id} Houses={Houses} />)}</ul>
+  <div>
+    <ul className="cards">
+      {houses.map(house => 
+        <PhotoCard key={house.id} house={house} />)}
+      </ul>
     </div>
   </div>
 </div>

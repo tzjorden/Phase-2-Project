@@ -2,43 +2,70 @@
   "homes": [
     {
       "id": 1,
-      "street": "southgate",
+      "street": "Southgate",
       "image": "https://ap.rdcpix.com/f2ffcf5b959ed39ac07c360df6690208l-m3885332898od-w480_h360_x2.webp",
-      "status": "active",
       "price": 475000,
       "bedrooms": 3,
-      "bathrooms": 2,
       "squareFeet": 1654
     },
     {
       "id": 2,
-      "street": "carriage",
+      "street": "Carriage St",
       "image": "https://ap.rdcpix.com/1377f2c2c228d73f5487e9697263ea06l-m2390503432od-w480_h360_x2.webp",
-      "status": "pending",
       "price": 450000,
       "bedrooms": 3,
-      "bathrooms": 2,
       "squareFeet": 2372
     },
     {
       "id": 3,
-      "street": "kiowa",
+      "street": "Kiowa St",
       "image": "https://ap.rdcpix.com/eee241fcb8e7dcf08bb252ab78fe317al-m2402545052od-w480_h360_x2.webp",
-      "status": "pending",
       "price": 579000,
       "bedrooms": 3,
-      "bathrooms": 2,
       "squareFeet": 2113
     },
     {
       "id": 4,
-      "street": "lovell",
+      "street": "Lovell St",
       "image": "https://ap.rdcpix.com/22f0b0d2c2160b052680a42125672540l-m633656631od-w480_h360_x2.webp",
-      "status": "active",
       "price": 615000,
       "bedrooms": 4,
-      "bathrooms": 4,
       "squareFeet": 2612
+<<<<<<< HEAD
+=======
+    },
+    {
+      "street": "25714 SE 164TH ST",
+      "image": "https://images.unsplash.com/photo-1549517045-bc93de075e53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80",
+      "price": 44444,
+      "bedrooms": 3,
+      "squareFeet": 700,
+      "id": 5
+    },
+    {
+      "street": "Pine St",
+      "image": "https://photos.zillowstatic.com/fp/dff8854f7563aa9bb85629366537e80d-cc_ft_1536.webp",
+      "price": 830000,
+      "bedrooms": 3,
+      "squareFeet": 680,
+      "id": 6
+    },
+    {
+      "street": "Broadway",
+      "image": "https://photos.zillowstatic.com/fp/b3ed1e6cef1f40e53e9398583cd0938f-cc_ft_1536.webp",
+      "price": 720000,
+      "bedrooms": 2,
+      "squareFeet": 740,
+      "id": 7
+    },
+    {
+      "street": "MacArthur St",
+      "image": "https://photos.zillowstatic.com/fp/430725b4618d214dc441763bc0e958da-cc_ft_1536.webp",
+      "price": 650000,
+      "bedrooms": 4,
+      "squareFeet": 500,
+      "id": 8
+>>>>>>> main
     }
   ]
 }
