@@ -4,16 +4,14 @@ function NewHouseForm() {
 
     const [street, setStreet] = useState("Unknown")
     const [image, setImage] = useState("Unknown")
-    const [status, setStatus] = useState("Unknown")
     const [price, setPrice] = useState("")
-    const [bedRooms, setBedRooms] = useState("")
-    const [bathRoom, setbathroom] = useState("")
+    const [bedrooms, setBedRooms] = useState("")
     const [squareFeet, setsquareFeet] = useState("")
 
     const handleSubmit = e => {
         // e.preventDefault()
     
-        const newHouse = { street, image, status, price, bedRooms, bathRoom, squareFeet }
+        const newHouse = { street, image, price, bedrooms, squareFeet }
         console.log("test")
     
         fetch('http://localhost:3000/Homes', {

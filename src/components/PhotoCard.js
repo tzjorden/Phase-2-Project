@@ -3,24 +3,32 @@ import React, { useState } from 'react';
 
 function PhotoCard({ house }) {
 
-
-  const [isSaved, setIsSaved] = useState(true)
+  const [style, setStyle] = useState("cont")
+  const [isFavorited, setIsFavorited] = useState(true)
   const toggleOut = () => {
-    setIsSaved(!isSaved)
+    setIsFavorited(!isFavorited)
+    // (setStyle("cont2")
+    if(style == "cont1") {
+      return (setStyle("cont2"))
+    } else {
+      return (setStyle("cont1"))
+    }
+    
+
 
 
   }
-  return ( <div>
+  return ( <div className={style}>
      <li className="card">
       <img src={house.image} alt={"House name"} />
       <h4>Price: {house.price}</h4>
       <p>{house.squareFeet} sqft</p>
       <p style={{textTransform: 'capitalize'}}>Area: {house.street}</p>
-      <p >Bedrooms: {house.bedrooms}, Bathrooms: {house.bedrooms}.</p>
-      {isSaved ? (
-        <button onClick= {toggleOut} className="primary">Save</button>
+      <p >Bedrooms: {house.bedrooms}.</p>
+      {isFavorited ? (
+        <button onClick= {toggleOut} className="primary">Favorited</button>
       ) : (
-        <button onClick= {toggleOut} className="primary" >Saved</button>
+        <button onClick= {toggleOut} className="primary" >Favorite</button>
       )}
     </li>
   </div>

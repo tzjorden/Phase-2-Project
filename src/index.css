@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightblue;
 }
 
 code {
@@ -35,15 +36,17 @@ code {
   margin: 1rem;
   text-align: center;
   border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(209, 209, 209);
 
   
 }
 .cards { 
   list-style: none;
   margin: auto;
-  width: 90%;
+  width: 70%;
   border: 3px solid rgb(0, 0, 0);
   padding: 10px;
+  background-color: rgb(49, 49, 49);
 }
 .card img {
   width: 45%;
@@ -60,7 +63,7 @@ code {
    position:absolute;
    height:100px;
    width:400px; 
-   top:50px;
+   
    left:120px;
   
   
@@ -69,9 +72,10 @@ button.primary {
   background-color:white;
   color: black;
 }
+/* 1.2fr 0.7fr 2fr 2fr [re] 2fr 2.2fr 2.1fr 0.6fr; */
 .Home {  display: grid;
   grid-template-columns: 0.6fr 1.8fr 0.6fr;
-  grid-template-rows: 1.2fr 0.7fr 2fr 2fr [re] 2fr 2.2fr 2.1fr 0.6fr;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -90,28 +94,36 @@ button.primary {
 .Searchbar { grid-area: Searchbar;
   position:relative;
   width:640px;
+  height: 70px;
   
   margin: 0 auto;
  }
 
-.results { grid-area: results; }
+.results { grid-area: results;
+   }
 
 
 
  
  #search {
    width: 100%;
-   height: 40%
+   height: 40%;
+   
  }
 
 .nav { 
   text-align:center;
+  background-color: rgb(104, 104, 104);
+  color: white
+}
+.active {
+  color: white
 }
 .newForm {
   position:relative;
   
   width:640px;
-  top:50px;
+  
   text-align:center;
   margin: auto;
 }
@@ -133,5 +145,19 @@ button.primary {
   font-size: 2.3em;
   color: red;
 }
-
+.cont {
+  /* width: 250px;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 150px; */
+  /* height: 200px; */
+  background-color: rgb(49, 49, 49);
+}
+.cont2 {
+  /* width: 250px;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 150px; */
+  background-color: rgb(248, 190, 0);
+}
 
