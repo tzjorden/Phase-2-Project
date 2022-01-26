@@ -7,7 +7,13 @@ function PhotoCard({ house }) {
   const [isFavorited, setIsFavorited] = useState(true)
   const toggleOut = () => {
     setIsFavorited(!isFavorited)
-    setStyle("cont2")
+    // (setStyle("cont2")
+    if(style == "cont1") {
+      return (setStyle("cont2"))
+    } else {
+      return (setStyle("cont1"))
+    }
+    
 
 
 
@@ -20,9 +26,9 @@ function PhotoCard({ house }) {
       <p style={{textTransform: 'capitalize'}}>Area: {house.street}</p>
       <p >Bedrooms: {house.bedrooms}.</p>
       {isFavorited ? (
-        <button onClick= {toggleOut} className="primary">Favorite</button>
+        <button onClick= {toggleOut} className="primary">Favorited</button>
       ) : (
-        <button onClick= {toggleOut} className="primary" >Favorited</button>
+        <button onClick= {toggleOut} className="primary" >Favorite</button>
       )}
     </li>
   </div>
