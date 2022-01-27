@@ -5,8 +5,10 @@ import NewHouseForm from "./NewHouseForm";
 
 
 // changeSearchStringInState
+const renderHouses = (l, dl) =>
+<PhotoCard key={l.id} house={l} deleteListing={dl}/>
 
-function Home ({ houses, changeSearchStringInState }) {
+function Home ({ houses, changeSearchStringInState, deleteListing}) {
   
   
   return (
@@ -24,8 +26,7 @@ function Home ({ houses, changeSearchStringInState }) {
   <div className="results">
   <div>
     <ul className="cards">
-      {houses.map(house => 
-        <PhotoCard key={house.id} house={house} />)}
+      {houses.map((houses) => renderHouses(houses, deleteListing))}
       </ul>
     </div>
   </div>

@@ -31,6 +31,13 @@ function App() {
     }
   }
 
+  const deleteListing = id => {
+    const index = houses.findIndex( (listing)  => listing.id == id)
+    const newListings = [...houses]
+    newListings.splice(index, 1)
+    setHouses(newListings)
+  }
+
   // const filteredPrice = (search) => {    
   //   if(search >= 500000) {
   //     return houses.filter(house => house.price.includes(housePrice));
@@ -52,7 +59,7 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/">
-          <Home  houses={ filteredHouse() } changeSearchStringInState={changeSearchStringInState}  />
+          <Home  houses={ filteredHouse() } changeSearchStringInState={changeSearchStringInState} deleteListing={deleteListing} />
         </Route>
       </Switch>
     </div>

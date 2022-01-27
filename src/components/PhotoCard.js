@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 
-function PhotoCard({ house }) {
+function PhotoCard({ house, deleteListing }) {
+
 
   const [style, setStyle] = useState("cont")
   const [isFavorited, setIsFavorited] = useState(true)
@@ -13,6 +14,7 @@ function PhotoCard({ house }) {
     } else {
       return (setStyle("cont"))
     }
+    
     
 
 
@@ -30,6 +32,7 @@ function PhotoCard({ house }) {
       ) : (
         <button onClick= {toggleOut} className="primary" >Favorited!</button>
       )}
+      <button onClick={() => deleteListing(house.id)} className="emoji-button delete">🗑</button>
     </li>
   </div>
   )}
