@@ -5,11 +5,12 @@ import NewHouseForm from "./NewHouseForm";
 
 
 // changeSearchStringInState
-const renderHouses = (l, dl) =>
-<PhotoCard key={l.id} house={l} deleteListing={dl}/>
+// const renderHouses = (l, dl) =>
+// <PhotoCard key={l.id} house={l} deleteListing={dl} setHouses={setHouses}/>
 
-function Home ({ houses, changeSearchStringInState, deleteListing}) {
-  
+function Home ({ houses, changeSearchStringInState, setHouses,}) {
+  const renderHouses = (l, dl) =>
+<PhotoCard key={l.id} house={l}  setHouses={setHouses} houses={houses}/>
   
   return (
 
@@ -26,7 +27,7 @@ function Home ({ houses, changeSearchStringInState, deleteListing}) {
   <div className="results">
   <div>
     <ul className="cards">
-      {houses.map((houses) => renderHouses(houses, deleteListing))}
+      {houses.map((houses) => renderHouses(houses))}
       </ul>
     </div>
   </div>

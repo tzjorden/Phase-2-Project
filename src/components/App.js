@@ -15,8 +15,7 @@ function App() {
     fetch('http://localhost:3000/homes')
     .then(r => r.json())
     .then(setHouses)
-  }, []
-  )
+  }, [])
 
   const changeSearchStringInState = searchString => {
     setSearch(searchString)
@@ -31,12 +30,7 @@ function App() {
     }
   }
 
-  const deleteListing = id => {
-    const index = houses.findIndex( (listing)  => listing.id == id)
-    const newListings = [...houses]
-    newListings.splice(index, 1)
-    setHouses(newListings)
-  }
+  
 
   // const filteredPrice = (search) => {    
   //   if(search >= 500000) {
@@ -59,7 +53,7 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/">
-          <Home  houses={ filteredHouse() } changeSearchStringInState={changeSearchStringInState} deleteListing={deleteListing} />
+          <Home  houses={ filteredHouse() } changeSearchStringInState={changeSearchStringInState}  setHouses={setHouses}/>
         </Route>
       </Switch>
     </div>

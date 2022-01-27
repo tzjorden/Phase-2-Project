@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
-function PhotoCard({ house, deleteListing }) {
-
+function PhotoCard({ house, setHouses, houses }) {
 
   const [style, setStyle] = useState("cont")
   const [isFavorited, setIsFavorited] = useState(true)
@@ -14,12 +13,25 @@ function PhotoCard({ house, deleteListing }) {
     } else {
       return (setStyle("cont"))
     }
-    
-    
-
-
-
   }
+    function handleDeleteClick() {
+      fetch(`http://localhost:3000/homes/${house.id}`, {
+        method: "DELETE"
+      })
+      .then(() => handleDeleteHouse(house.id))
+    }
+
+    function handleDeleteHouse(id) {
+      const updatedHouses = houses.filter((house) => {
+        return house.id !== id
+      })
+      setHouses(updatedHouses)
+    
+    }
+    
+
+
+  
   return ( <div className={style}>
      <li className="card">
       <img src={house.image} alt={"House name"} />
@@ -32,9 +44,9 @@ function PhotoCard({ house, deleteListing }) {
       ) : (
         <button onClick= {toggleOut} className="primary" >Favorited!</button>
       )}
-      <button onClick={() => deleteListing(house.id)} className="emoji-button delete">🗑</button>
+      <button onClick={handleDeleteClick} className="emoji-button delete perm1">🗑1</button>
     </li>
   </div>
   )}
-
+  
 export default PhotoCard;
