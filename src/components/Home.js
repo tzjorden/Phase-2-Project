@@ -8,9 +8,9 @@ import NewHouseForm from "./NewHouseForm";
 // const renderHouses = (l, dl) =>
 // <PhotoCard key={l.id} house={l} deleteListing={dl} setHouses={setHouses}/>
 
-function Home ({ houses, changeSearchStringInState, setHouses,}) {
-  const renderHouses = (l, dl) =>
-<PhotoCard key={l.id} house={l}  setHouses={setHouses} houses={houses}/>
+function Home ({ houses, changeSearchStringInState, setHouses, style}) {
+  const renderHouses = (l) =>
+<PhotoCard key={l.id} house={l}  setHouses={setHouses} houses={houses} />
   
   return (
 

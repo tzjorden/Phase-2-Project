@@ -17,6 +17,8 @@ function App() {
     .then(setHouses)
   }, [])
 
+       
+
   const changeSearchStringInState = searchString => {
     setSearch(searchString)
   }
@@ -28,8 +30,9 @@ function App() {
     } else {
        return houses
     }
+    
   }
-
+  
   
 
   // const filteredPrice = (search) => {    

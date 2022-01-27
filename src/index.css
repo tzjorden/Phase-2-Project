@@ -37,9 +37,10 @@ code {
   text-align: center;
   border: 1px solid rgb(0, 0, 0);
   background-color: rgb(209, 209, 209);
+}
 
   
-}
+
 .cards { 
   list-style: none;
   margin: auto;
@@ -163,4 +164,6 @@ button.primary {
 .articles{
   text-align: center;
 }
-
+.likes2 { 
+  color : blue
+}

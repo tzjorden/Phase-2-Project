@@ -3,17 +3,23 @@ import React, { useState, useEffect } from 'react';
 
 function PhotoCard({ house, setHouses, houses }) {
 
+
+  const [styleLikes, setStyleLikes] = useState("likes")
   const [style, setStyle] = useState("cont")
   const [isFavorited, setIsFavorited] = useState(true)
+  const [houseLikes, setHouseLikes] = useState()
   const toggleOut = () => {
     setIsFavorited(!isFavorited)
-    // (setStyle("cont2")
+
+    
     if(style == "cont") {
       return (setStyle("cont2"))
     } else {
       return (setStyle("cont"))
     }
   }
+
+
     function handleDeleteClick() {
       fetch(`http://localhost:3000/homes/${house.id}`, {
         method: "DELETE"
@@ -28,7 +34,37 @@ function PhotoCard({ house, setHouses, houses }) {
       setHouses(updatedHouses)
     
     }
+
+    function handleLikes() {
+      setHouseLikes(houseLikes + 1)
+
+      fetch(`http://localhost:3000/homes/${house.id}`, {
+        method: 'PATCH',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({likes: house.likes + 1})
+      })
     
+    .then((res) => res.json())
+    .then((updatedItem) => handleUpdateLikes(updatedItem))
+    }
+
+    function handleUpdateLikes(updatedItem) {
+      const updatedItems = houses.map((house) => {
+        if(house.id === updatedItem.id) {
+          return updatedItem;
+        } else {
+          return house;
+        }
+      });
+      setHouses(updatedItems);
+        if (house.likes >= 0) {
+          setStyleLikes("likes2")
+        }
+      
+    }
+    
+    
+  
 
 
   
@@ -39,12 +75,14 @@ function PhotoCard({ house, setHouses, houses }) {
       <p>{house.squareFeet} sqft</p>
       <p style={{textTransform: 'capitalize'}}>Area: {house.street}</p>
       <p >Bedrooms: {house.bedrooms}.</p>
+      <p className={styleLikes}>Likes: {house.likes}.</p>
       {isFavorited ? (
         <button onClick= {toggleOut} className="primary">Favorite</button>
       ) : (
         <button onClick= {toggleOut} className="primary" >Favorited!</button>
       )}
-      <button onClick={handleDeleteClick} className="emoji-button delete perm1">🗑1</button>
+      <button onClick={handleDeleteClick} className="emoji-button delete perm">🗑</button>
+      <button onClick={handleLikes} className="like-button">Like</button>
     </li>
   </div>
   )}
