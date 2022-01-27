@@ -117,7 +117,7 @@ button.primary {
   color: white
 }
 .active {
-  color: white
+  color: white;
 }
 .newForm {
   position:relative;
@@ -159,5 +159,8 @@ button.primary {
   margin-top: 50px;
   margin-left: 150px; */
   background-color: rgb(248, 190, 0);
+}
+.articles{
+  text-align: center;
 }
 
