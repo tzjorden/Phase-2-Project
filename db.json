@@ -2,8 +2,9 @@
   "homes": [
     {
       "id": 1,
-      "street": "Southgate",
+      "street": "southgate",
       "image": "https://ap.rdcpix.com/f2ffcf5b959ed39ac07c360df6690208l-m3885332898od-w480_h360_x2.webp",
+      "status": "active",
       "price": 475000,
       "bedrooms": 3,
       "squareFeet": 1654,

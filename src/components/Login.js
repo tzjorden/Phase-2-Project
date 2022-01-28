@@ -1,18 +1,51 @@
-import React from "react";
 
-function Login() {
+
+import React, { useState } from "react";
+
+ function Login() {
+  const [loanAmount, setLoanAmount] = useState(0);
+  const [interestRate, setInterestRate] = useState(0);
+  const [numMonths, setNumMonth] = useState(0);
+  const [monthlyPayment, setMonthlyPayment] = useState(0);
+  const calculate = (e) => {
+    e.preventDefault();
+    const formValid =
+      +loanAmount >= 0 &&
+      0 <= +interestRate &&
+      +interestRate <= 100 &&
+      +numMonths > 0;
+    if (!formValid) {
+      return;
+    }
+    setMonthlyPayment((+loanAmount * (1 + +interestRate / 100)) / +numMonths);
+  };
   return (
-    <div>
-      <h1>Login</h1>
-      <form>
+    <div className="App">
+      <form onSubmit={calculate}>
         <div>
-          <input type="text" name="username" placeholder="Username" />
+          <label>loan amount</label>
+          <input
+            value={loanAmount}
+            onChange={(e) => setLoanAmount(e.target.value)}
+          />
         </div>
         <div>
-          <input type="password" name="password" placeholder="Password" />
+          <label>interest rate</label>
+          <input
+            value={interestRate}
+            onChange={(e) => setInterestRate(e.target.value)}
+          />
         </div>
-        <input type="submit" value="Submit" />
+        <div>
+          <label>number of months to pay off loan</label>
+          <input
+            value={numMonths}
+            onChange={(e) => setNumMonth(e.target.value)}
+          />
+        </div>
+        <button type="submit">calculate monthly payment</button>
       </form>
+      <p>monthly payment: {monthlyPayment.toFixed(2)}</p>
     </div>
   );
 }
