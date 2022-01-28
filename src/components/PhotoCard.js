@@ -70,7 +70,7 @@ function PhotoCard({ house, setHouses, houses }) {
   
   return ( <div className={style}>
      <li className="card">
-      <img src={house.image} alt={"House name"} />
+      <img className="img-cards" src={house.image} alt={"House name"} />
       <h4>Price: ${house.price}</h4>
       <p>{house.squareFeet} sqft</p>
       <p style={{textTransform: 'capitalize'}}>Area: {house.street}</p>
@@ -81,7 +81,7 @@ function PhotoCard({ house, setHouses, houses }) {
       ) : (
         <button onClick= {toggleOut} className="primary" >Favorited!</button>
       )}
-      <button onClick={handleDeleteClick} className="emoji-button delete perm">🗑</button>
+      <button onClick={handleDeleteClick} className="delete-btn">🗑</button>
       <button onClick={handleLikes} className="like-button">Like</button>
     </li>
   </div>

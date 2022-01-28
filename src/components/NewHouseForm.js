@@ -29,12 +29,12 @@ function NewHouseForm() {
           <h2>New House</h2>
     
           <form onSubmit={handleSubmit}>
-            <input onChange={e => setStreet(e.target.value)} type="text" name="Street" placeholder="Street" />
-            <input onChange={e => setImage(e.target.value)} type="text" name="Image" placeholder="Image URL" />
-            <input onChange={e => setPrice(e.target.value)} type="number" name="Price" step="0.01" placeholder="Price" />
-            <input onChange={e => setBedRooms(e.target.value)} type="text" name="Bedrooms" step="0.01" placeholder="Number of Rooms" />
-            <input onChange={e => setsquareFeet(e.target.value)} type="text" name="Squarefeet" step="0.01" placeholder="Squarefeet" />
-            <button type="submit">Add House</button>
+            <input onChange={e => setStreet(e.target.value)} className="form-inputs" type="text" name="Street" placeholder="Street" />
+            <input onChange={e => setImage(e.target.value)} className="form-inputs" type="text" name="Image" placeholder="Image URL" />
+            <input onChange={e => setPrice(e.target.value)} className="form-inputs" type="number" name="Price" step="0.01" placeholder="Price" />
+            <input onChange={e => setBedRooms(e.target.value)} className="form-inputs" type="text" name="Bedrooms" step="0.01" placeholder="Number of Rooms" />
+            <input onChange={e => setsquareFeet(e.target.value)} className="form-inputs"type="text" name="Squarefeet" step="0.01" placeholder="Squarefeet" />
+            <button type="submit" className="buttons">Add House</button>
     
           </form>
         </div>

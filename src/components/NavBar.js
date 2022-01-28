@@ -35,7 +35,7 @@ function NavBar() {
           textDecoration: "underline",
         }}
       >
-        About
+        Resources 
       </NavLink>
       <NavLink
         to="/login"
@@ -45,7 +45,7 @@ function NavBar() {
           textDecoration: "underline",
         }}
       >
-        Login
+      Calculator
       </NavLink>
     </div>
   );

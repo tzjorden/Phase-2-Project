@@ -37,6 +37,17 @@ code {
   text-align: center;
   border: 1px solid rgb(0, 0, 0);
   background-color: rgb(209, 209, 209);
+  /* transition: width .50s, height .50s;
+  height: 445px;
+  width: 700px; */
+}
+.card:hover {
+  margin: 1rem;
+  text-align: center;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(209, 209, 209);
+  /* height: 452px;
+  width: 553px; */
 }
 
   
@@ -69,10 +80,10 @@ code {
   
   
 }
-button.primary {
+/* button.primary {
   background-color:white;
   color: black;
-}
+} */
 /* 1.2fr 0.7fr 2fr 2fr [re] 2fr 2.2fr 2.1fr 0.6fr; */
 .Home {  display: grid;
   grid-template-columns: 0.6fr 1.8fr 0.6fr;
@@ -109,7 +120,32 @@ button.primary {
  #search {
    width: 100%;
    height: 40%;
+   transition: width .35s, height .35s;
    
+ }
+ #search:focus {
+  width: 419px;
+  height: 45%;
+ }
+ .form-inputs {
+  width: 40%;
+  height: 40%;
+  transition: width .25s, height .25s;
+ }
+ .form-inputs:focus {
+  width: 43%;
+  height: 43%;
+ }
+ .buttons {
+   background-color:grey;
+   height: 25px;
+   width: 150px;
+   transition: width .25s, height .25s;
+ }
+ .buttons:hover {
+   background-color: orange;
+   height: 25px;
+   width: 155px;
  }
 
 .nav { 
@@ -166,4 +202,95 @@ button.primary {
 }
 .likes2 { 
   color : blue
+}
+#calculator {
+  display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+#div-form {
+  display: block;
+    text-align: center;
+
+}
+.Calc-text {
+  font-size: 50px;
+}
+.buttons1 {
+  background-color:grey;
+   height: 70px;
+   font-size: 30px;
+   transition: width .25s, height .25s;
+  
+}
+.buttons1:hover {
+  background-color: orange;
+  height: 75px;
+  
+}
+#loan-term {
+padding-bottom: 20px
+}
+.Calc-input {
+  height: 30px;
+  width: 265px;
+  transition: width .25s, height .25s;
+}
+.Calc-input:focus {
+  height: 35px;
+  width: 270px;
+}
+.like-button {
+  height: 25px;
+  width: 50px;
+  transition: width .25s, height .25s;
+  margin-left: 60px;
+  margin-bottom: 5px;
+}
+.like-button:hover {
+  height: 28px;
+  width: 53px;
+  background-color: blue;
+  color: white;
+  
+}
+.like-button:active {
+  background-color:darkblue
+}
+.delete-btn {
+  height: 26px;
+  width: 24px;
+  transition: width .25s, height .25s;
+  margin-right: 17px;
+  }
+.delete-btn:hover {
+background-color: red;
+height: 29px;
+width: 28px;
+}
+.delete-btn:active {
+  background-color: rgb(208, 125, 17) ;
+  }
+.primary {
+  height: 25px;
+  width: 70px;
+  transition: width .25s, height .25s;
+  margin-right: 60px;
+}
+.primary:hover {
+  height: 29px;
+  width: 74px;
+  background-color: rgb(255, 140, 0);
+}
+.primary:active {
+  background-color: rgb(248, 190, 0)
+}
+.img-cards {
+height: 270px;
+transition: width .25s, height .25s;
+}
+.img-cards:hover {
+  height: 273px;
 }

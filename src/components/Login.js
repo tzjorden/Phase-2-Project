@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 
  function Login() {
-  const [loanAmount, setLoanAmount] = useState(0);
-  const [interestRate, setInterestRate] = useState(0);
-  const [numMonths, setNumMonth] = useState(0);
+  const [loanAmount, setLoanAmount] = useState("");
+  const [interestRate, setInterestRate] = useState("");
+  const [numMonths, setNumMonth] = useState("");
   const [monthlyPayment, setMonthlyPayment] = useState(0);
   const calculate = (e) => {
     e.preventDefault();
@@ -18,34 +18,41 @@ import React, { useState } from "react";
       return;
     }
     setMonthlyPayment((+loanAmount * (1 + +interestRate / 100)) / +numMonths);
+    
   };
   return (
-    <div className="App">
-      <form onSubmit={calculate}>
+    <div className="App" id="div-form">
+      <form onSubmit={calculate} id="calculator">
         <div>
-          <label>loan amount</label>
+          <label className="Calc-text">Loan amount: </label>
           <input
             value={loanAmount}
             onChange={(e) => setLoanAmount(e.target.value)}
+            placeholder="Dollar Amount"
+            className="Calc-input"
           />
         </div>
         <div>
-          <label>interest rate</label>
+          <label className="Calc-text">Interest rate: </label>
           <input
             value={interestRate}
             onChange={(e) => setInterestRate(e.target.value)}
+            placeholder="Percentage"
+            className="Calc-input"
           />
         </div>
-        <div>
-          <label>number of months to pay off loan</label>
+        <div id="loan-term">
+          <label className="Calc-text">Loan term: </label>
           <input
             value={numMonths}
             onChange={(e) => setNumMonth(e.target.value)}
+            placeholder="Months"
+            className="Calc-input"
           />
         </div>
-        <button type="submit">calculate monthly payment</button>
+        <button type="submit" className="buttons1">Calculate monthly payment</button>
       </form>
-      <p>monthly payment: {monthlyPayment.toFixed(2)}</p>
+      <p className="Calc-text" >Monthly payment: {monthlyPayment.toFixed(2)}</p>
     </div>
   );
 }
