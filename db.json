@@ -1,16 +1,6 @@
 {
   "homes": [
     {
-      "id": 1,
-      "street": "southgate",
-      "image": "https://ap.rdcpix.com/f2ffcf5b959ed39ac07c360df6690208l-m3885332898od-w480_h360_x2.webp",
-      "status": "active",
-      "price": 475000,
-      "bedrooms": 3,
-      "squareFeet": 1654,
-      "likes": 0
-    },
-    {
       "id": 2,
       "street": "Carriage St",
       "image": "https://ap.rdcpix.com/1377f2c2c228d73f5487e9697263ea06l-m2390503432od-w480_h360_x2.webp",
@@ -63,6 +53,40 @@
       "squareFeet": 500,
       "id": 8,
       "likes": 0
+    },
+    {
+      "street": "Panthon RD",
+      "image": "https://www.opendoor.com/w/wp-content/uploads/2019/06/cost-selling-house-houston.jpg",
+      "price": 440000,
+      "bedrooms": 3,
+      "squareFeet": 1200,
+      "id": 9,
+      "likes": 0
+    },
+    {
+      "street": "Creek Ln",
+      "image": "https://cdn.vox-cdn.com/thumbor/XUdUk_rKJ8WDTd0zksnnicYDwbY=/0x0:3760x2500/1200x800/filters:focal(1580x950:2180x1550)/cdn.vox-cdn.com/uploads/chorus_image/image/65135516/shutterstock_349464740.0.jpg",
+      "price": 630000,
+      "bedrooms": 2,
+      "squareFeet": 1500,
+      "id": 10,
+      "likes": 0
+    },
+    {
+      "street": "1063 Hillhaven Drive",
+      "image": "https://images.unsplash.com/photo-1549517045-bc93de075e53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80",
+      "price": "2000",
+      "bedrooms": "3",
+      "squareFeet": "700",
+      "id": 11
+    },
+    {
+      "street": "New house drive",
+      "image": "https://images.unsplash.com/photo-1549517045-bc93de075e53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80",
+      "price": "500000",
+      "bedrooms": "3",
+      "squareFeet": "1200",
+      "id": 12
     }
   ]
 }

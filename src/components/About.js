@@ -3,7 +3,7 @@ function About() {
   return (
     <div className = "articles">
     <h1 className > Some Useful Articles for Home Buyers </h1>
-        <h3>Steps to Homeownership with CalHFA </h3>
+        <h3>Steps To Homeownership with CalHFA </h3>
         <a href="https://www.calhfa.ca.gov/homebuyer/">
           <button className="buttons">Click to Read Article</button>
         </a>
