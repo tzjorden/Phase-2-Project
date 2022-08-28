@@ -292,5 +292,6 @@ width: 28px;
 transition: width .25s, height .25s;
 }
 .img-cards:hover {
-  height: 273px;
+height: 100%;
+width: 100%;
 }

@@ -8,7 +8,7 @@ function Search({ changeSearchStringInState }) {
       <input
         type="text"
         id="search"
-        placeholder="Type a name to search..."
+        placeholder="Type a area to search..."
         onChange={(e) => changeSearchStringInState( e.target.value)}
       />
     </div>
