@@ -17,6 +17,7 @@ import React, { useState } from "react";
     if (!formValid) {
       return;
     }
+    
     setMonthlyPayment((+loanAmount * (1 + +interestRate / 100)) / +numMonths);
     
   };

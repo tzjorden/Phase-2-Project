@@ -19,7 +19,6 @@ function PhotoCard({ house, setHouses, houses }) {
     }
   }
 
-
     function handleDeleteClick() {
       fetch(`http://localhost:3000/homes/${house.id}`, {
         method: "DELETE"
@@ -32,7 +31,6 @@ function PhotoCard({ house, setHouses, houses }) {
         return house.id !== id
       })
       setHouses(updatedHouses)
-    
     }
 
     function handleLikes() {
@@ -60,13 +58,7 @@ function PhotoCard({ house, setHouses, houses }) {
         if (house.likes >= 0) {
           setStyleLikes("likes2")
         }
-      
     }
-    
-    
-  
-
-
   
   return ( <div className={style}>
      <li className="card">
