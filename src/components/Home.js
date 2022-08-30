@@ -15,14 +15,11 @@ function Home ({ houses, changeSearchStringInState, setHouses, style}) {
   return (
 
     <div className="Home">
-
       <div className="newForm">
         <NewHouseForm />
-      </div>
+     </div>
   <div className="Searchbar">
-    
       <Search changeSearchStringInState = {changeSearchStringInState} />
-    
   </div>
   <div className="results">
   <div>
@@ -32,14 +29,7 @@ function Home ({ houses, changeSearchStringInState, setHouses, style}) {
     </div>
   </div>
 </div>
-
-  
   );
-
-      }
-
-// }
- 
-
+  }
 
 export default Home;
