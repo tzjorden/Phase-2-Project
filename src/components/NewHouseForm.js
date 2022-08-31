@@ -10,10 +10,8 @@ function NewHouseForm() {
 
     const handleSubmit = e => {
         // e.preventDefault()
-    
         const newHouse = { street, image, price, bedrooms, squareFeet }
         console.log("test")
-    
         fetch('http://localhost:3000/Homes', {
           method: 'POST',
           headers: { "Content-Type": "application/json" },
@@ -24,7 +22,6 @@ function NewHouseForm() {
     return (
         <div className="form">
           <h2>New House</h2>
-    
           <form onSubmit={handleSubmit}>
             <input onChange={e => setStreet(e.target.value)} className="form-inputs" type="text" name="Street" placeholder="Street" />
             <input onChange={e => setImage(e.target.value)} className="form-inputs" type="text" name="Image" placeholder="Image URL" />
@@ -32,7 +29,6 @@ function NewHouseForm() {
             <input onChange={e => setBedRooms(e.target.value)} className="form-inputs" type="text" name="Bedrooms" step="0.01" placeholder="Number of Rooms" />
             <input onChange={e => setsquareFeet(e.target.value)} className="form-inputs"type="text" name="Squarefeet" step="0.01" placeholder="Squarefeet" />
             <button type="submit" className="buttons">Add House</button>
-    
           </form>
         </div>
       );

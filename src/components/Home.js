@@ -3,7 +3,6 @@ import PhotoCard from "./PhotoCard";
 import Search from "./Search";
 import NewHouseForm from "./NewHouseForm";
 
-
 // changeSearchStringInState
 // const renderHouses = (l, dl) =>
 // <PhotoCard key={l.id} house={l} deleteListing={dl} setHouses={setHouses}/>
