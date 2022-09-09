@@ -12,14 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .App {
   text-align: center;
   margin: 0 auto;
   max-width: 1200px;
-  
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -30,8 +27,6 @@ code {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-
 .card {
   margin: 1rem;
   text-align: center;
@@ -49,9 +44,6 @@ code {
   /* height: 452px;
   width: 553px; */
 }
-
-  
-
 .cards { 
   list-style: none;
   margin: auto;
@@ -74,11 +66,8 @@ code {
    */
    position:absolute;
    height:100px;
-   width:400px; 
-   
+   width:400px;  
    left:120px;
-  
-  
 }
 /* button.primary {
   background-color:white;
@@ -249,7 +238,7 @@ padding-bottom: 20px
   width: 24px;
   transition: width .25s, height .25s;
   margin-right: 17px;
-  }
+}
 .delete-btn:hover {
 background-color: red;
 height: 29px;
